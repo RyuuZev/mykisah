@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Bagian Ini Adalah TEMPAT KAMU MENAMBAHKAN/MENGEDIT NOVEL ---
+
     const novelsData = [
         {
-            id: 'novel-1', // ID unik untuk novel ini
+            id: 'novel-1',
             title: 'Firefly',
             author: 'pasya',
             synopsis: 'Caelus, seorang Trailblazer dari Astral Express, tiba di Penacony, planet hibu' +
@@ -22,7 +22,10 @@ document.addEventListener('DOMContentLoaded', () => {
               <p>Setahun kemudian, Caelus sama Firefly mutusin buat nikah. Mereka pilih Astral Express sebagai tempat pernikahan—tempat yang jadi saksi perjuangan mereka bareng. March 7th jadi wedding planner dadakan, Dan Heng bantu dekorasi, dan Himeko jadi pendeta (meskipun cuma pura-pura). Pom-Pom malah jadi pembawa acara dengan topi kecil lucu.</p>
               <p>Firefly pake gaun putih sederhana dengan aksen bunga holografik, rambut peraknya dikasih hiasan kecil berbentuk bintang. Caelus pake jas hitam dengan mantel khas Trailblazer-nya, gugup tapi bahagia. Pas ijab kabul, Caelus bilang, “Aku janji bakal jaga kamu, di tiap galaksi yang kita jelajahi.” Firefly, dengan mata berkaca, jawab, “Aku juga, Caelus. Selamanya.”</p>
               <p>Pernikahan itu kecil tapi hangat, cuma dihadiri kru Express sama beberapa temen dari Penacony. Setelah upacara, mereka dansa di bawah langit holografik, dengan lagu yang pernah Firefly nyanyiin pas pertama ketemu. “Kamu bikin hidupku kayak mimpi yang nggak mau aku bangun,” bisik Firefly. Caelus cuma tersenyum, nyium keningnya, dan mereka lanjut petualangan sebagai suami istri.</p>
-
+              <p style="text-align: justify;">
+        <img src="https://cdn.donmai.us/original/2f/05/__trailblazer_firefly_and_caelus_honkai_and_1_more_drawn_by_feint721__2f05d73c9bf9b7897e3b1cdb1e1efe4b.jpg"
+             alt="Caefly"
+             style="max-width: 400px; height: auto; margin: 10px 0;">
             `
         }, {
             id: 'novel-2',
@@ -66,20 +69,21 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>Rover berdiri di samping tubuh Fleurdelys, napasnya masih memburu, pedangnya berdarah hitam. Kilat menyambar di langit Rinascita, hujan mulai turun, membasahi wajahnya yang penuh luka. “Aku tau… kau juga punya alasan,” kata Rover pelan, matanya penuh simpati, tapi tekadnya nggak goyah. Dia berbalik, langkahnya berat tapi penuh kemenangan, siap menghadapi tantangan berikutnya di dunia yang penuh luka ini.</p>
             <p>Hujan terus turun, membasuh darah dan puing-puing pertarungan. Di kejauhan, suara Tacet Discord mereda, seolah alam ikut menghormati perjuangan Rover. Dia udah buktiin—bahkan di titik terendah, resonansi hati yang nggak menyerah bisa ubah takdir.</p>
 `
+        }, {
+            id: 'novel-4',
+            title: 'Unknown',
+            author: 'Caelusya',
+            synopsis: 'Unknown',
+            content: `
+            
+            `
         }
-        // --- TAMBAHKAN NOVEL BARU DI SINI --- {     id: 'novel-4',     title: 'Judul
-        // Novel Baru',     author: 'Nama Penulis',     synopsis: 'Sinopsis singkat
-        // novel barumu.',     content: `         <p>Ini adalah isi lengkap novel
-        // barumu.</p>         <p>Kamu bisa menambahkan paragraf sebanyak yang kamu
-        // mau.</p>         <p>Gunakan tag &lt;p&gt;&lt;/p&gt; untuk setiap paragraf
-        // baru.</p>     ` }
     ];
-    // --- AKHIR BAGIAN DATA NOVEL --- --- Fungsionalitas Halaman Utama (index.html)
-    // ---
+
     const novelListContainer = document.getElementById('novelList');
     if (novelListContainer) {
         const novelGrid = novelListContainer.querySelector('.novel-grid');
-        novelGrid.innerHTML = ''; // Kosongkan placeholder
+        novelGrid.innerHTML = '';
 
         novelsData.forEach(novel => {
             const novelCard = document.createElement('div');
@@ -107,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (novel) {
             document
                 .getElementById('novelTitle')
-                .textContent = novel.title; // Update title di tab browser
+                .textContent = novel.title;
             document
                 .getElementById('novelDetailTitle')
                 .textContent = novel.title;
@@ -116,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .textContent = novel.author;
             document
                 .getElementById('novelDetailText')
-                .innerHTML = novel.content; // Gunakan innerHTML untuk konten HTML
+                .innerHTML = novel.content;
         } else {
             document
                 .getElementById('novelTitle')
